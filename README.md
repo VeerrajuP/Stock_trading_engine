@@ -45,7 +45,6 @@ The Stock Trading Engine follows these key steps:
 🔹 Solution: Using threading.Lock()
 	•	A lock prevents multiple threads from modifying the order book simultaneously.
 	•	Ensures only one process changes the order list at a time.
- 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -61,9 +60,24 @@ The stock_trading_engine.py file implements the core Buy/Sell order matching eng
  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  📝 Code Breakdown
-
 Here’s a step-by-step explanation of the code:
 
-📌 1. Order Class
-Defines Buy/Sell orders with attributes like order_type, ticker, quantity, price, and a timestamp.
+📌 1. Importing Required Libraries
+https://github.com/VeerrajuP/Stock_trading_engine/blob/main/required%20libraries.png
+
+📌 Why?
+	•	threading – Ensures multi-threaded processing.
+	•	time – Assigns timestamps to orders.
+	•	random – Simulates random stock orders.
+
+📌 2. Defining the Order Class
+https://github.com/VeerrajuP/Stock_trading_engine/blob/main/ordering.png
+
+📌 Why?
+	•	Each order object stores the essential details of a trade.
+	•	Timestamp ensures fair execution when multiple orders have the same price.
+
+ 📌 3. Defining the OrderBook Class
+ 
+
 
