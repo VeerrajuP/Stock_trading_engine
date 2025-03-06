@@ -1,25 +1,50 @@
 # Stock_trading_engine
 
-📖 Explanation of the Real-Time Stock Trading Engine Code and GitHub Project:
-This section provides a detailed breakdown of your stock trading engine, including its structure, code explanation, execution steps, and GitHub best practices.
+📖 Ultimate Theoretical & Code Breakdown of the Stock Trading Engine
+This Section provides a comprehensive, highly effective, and structured explanation of the Stock Trading Engine, merging both theory and code breakdowns for maximum clarity.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📈 Real-Time Stock Trading Engine:
-A high-performance, multi-threaded trading engine that efficiently matches stock Buy and Sell orders without using dictionaries or heaps. This system is designed to be lightweight, scalable, and easy to extend.
+📈 Introduction: What is a Stock Trading Engine?
+A stock trading engine is a core financial system responsible for matching buy and sell orders in financial markets. It enables efficient execution of trades and ensures price fairness.
+
+🚀 Why is it Important?
+	•	Facilitates Real-Time Trading – Ensures traders can buy and sell stocks seamlessly.
+	•	Maintains Market Liquidity – Keeps stock transactions flowing.
+	•	Implements FIFO (First In, First Out) Execution – Ensures fairness in order processing.
+	•	Handles Concurrent Trades – Prevents race conditions when multiple traders interact simultaneously.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-📂 GitHub Project Structure:
+🏛️ Theoretical Explanation
 
-stock_trading_engine/
-│── screenshots/             # Contains images for documentation
-│   ├── order_matching.png   # Screenshot of order matching in action
-│   ├── terminal_output.png  # Screenshot of terminal execution
-│── stock_trading_engine.py  # Core trading engine script
-│── run.sh                   # Shell script for easy execution
-│── README.md                # Documentation with images & explanations
-│── .gitignore               # Ignore unnecessary files (e.g., __pycache__)
+📌 1. How the Trading Engine Works
+The Stock Trading Engine follows these key steps:
+
+🔹 Step 1: Accept Buy & Sell Orders
+	•	Traders place Buy or Sell orders, specifying:
+	•	Stock Ticker (e.g., AAPL, TSLA)
+	•	Quantity (number of shares)
+	•	Price (price per share)
+🔹 Step 2: Maintain an Order Book
+	•	Buy Orders are sorted by highest price first.
+	•	Sell Orders are sorted by lowest price first.
+🔹 Step 3: Order Matching Algorithm
+	•	A trade happens if the highest Buy order meets or exceeds the lowest Sell order.
+	•	If a partial match occurs, the remaining quantity stays in the book.
+🔹 Step 4: Execution & Trade Settlement
+	•	Matched orders are executed at the seller’s price.
+	•	Orders that remain unmatched wait for future trades.
+
+📌 2. Multi-Threading & Concurrency Control
+
+🔹 Why is Concurrency Important?
+	•	Multiple traders place orders at the same time.
+	•	Race conditions can corrupt order execution.
+	•	The system must handle real-time trading.
+🔹 Solution: Using threading.Lock()
+	•	A lock prevents multiple threads from modifying the order book simultaneously.
+	•	Ensures only one process changes the order list at a time.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
