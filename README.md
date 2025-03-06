@@ -63,7 +63,7 @@ The stock_trading_engine.py file implements the core Buy/Sell order matching eng
 Here’s a step-by-step explanation of the code:
 
 🔹 1. Importing Required Libraries
-https://github.com/VeerrajuP/Stock_trading_engine/blob/main/required%20libraries.png
+![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/8167bd82d995a7f5f6dd6dd444b2a5cfa999ae89/required%20libraries.png)
 
 📌 Why?
 	•	threading – Ensures the program supports multiple users placing orders simultaneously.
