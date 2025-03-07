@@ -65,7 +65,6 @@ The Order Matching Algorithm determines when and how orders are executed.
 	3.	Deadlocks – Threads waiting indefinitely for each other.
 
 🔹 Solution: Thread Locking Mechanism
-
 A lock (threading.Lock()) ensures that:
 	•	Only one thread modifies the order book at a time.
 	•	The order book remains consistent and accurate.
