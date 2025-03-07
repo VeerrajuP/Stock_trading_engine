@@ -37,7 +37,6 @@ The Order Book maintains a record of all active Buy and Sell orders.
 🔹 Order Book Properties
 	•	Buy Orders – Sorted in descending order (highest price first).
 	•	Sell Orders – Sorted in ascending order (lowest price first).
-
 This structure ensures that trades always execute at the most favorable price for both buyers and sellers.
 
 📌 3. Matching Algorithm Design
