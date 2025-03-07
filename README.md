@@ -136,7 +136,7 @@ Here’s a step-by-step explanation of the code:
 
  🔹 3. Defining the OrderBook Class
  
- ![image alt]((https://github.com/VeerrajuP/Stock_trading_engine/blob/main/orderbook.png) 
+ ![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/orderbook.png) 
 
  📌 Why?
 	•	Orders are stored in separate lists (buy_orders and sell_orders) to keep sorting simple.
