@@ -125,7 +125,8 @@ Here’s a step-by-step explanation of the code:
 
  🎯 Final Expected Output
 After running python stock_trading_engine.py, the terminal will show matched orders.
-https://github.com/VeerrajuP/Stock_trading_engine/blob/main/Output.png
+
+![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/Output.png)
 
 🔹 What This Output Means
 	•	A Buy and Sell order matched at the given price.
