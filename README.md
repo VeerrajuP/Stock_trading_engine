@@ -72,21 +72,24 @@ Here’s a step-by-step explanation of the code:
 	•	random – Simulates random order flow, mimicking a real trading environment.
 
 🔹 2. Defining the Order Class
-https://github.com/VeerrajuP/Stock_trading_engine/blob/main/ordering.png
+
+![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/ordering.png)
 
 📌 Why?
 	•	Each order represents a trade request (either buying or selling a stock).
 	•	Orders need a timestamp to ensure FIFO (First Come, First Served) execution when multiple orders have the same price.
 
  🔹 3. Defining the OrderBook Class
- https://github.com/VeerrajuP/Stock_trading_engine/blob/main/orderbook.png 
+ 
+ ![image alt]((https://github.com/VeerrajuP/Stock_trading_engine/blob/main/orderbook.png) 
 
  📌 Why?
 	•	Orders are stored in separate lists (buy_orders and sell_orders) to keep sorting simple.
 	•	threading.Lock() prevents race conditions when multiple orders arrive simultaneously.
 
  🔹 4. Adding Orders to the Order Book
- https://github.com/VeerrajuP/Stock_trading_engine/blob/main/adding%20orders.png
+ 
+ ![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/adding%20orders.png)
 
  📌 Why?
 	•	Buy orders are sorted by highest price first (buyers want the best price).
@@ -94,7 +97,8 @@ https://github.com/VeerrajuP/Stock_trading_engine/blob/main/ordering.png
 	•	Sorting ensures best prices are executed first.
 
 🔹 5. Matching Orders
-https://github.com/VeerrajuP/Stock_trading_engine/blob/main/matching%20orders.png
+
+![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/matching%20orders.png)
 
 📌 Why?
 	•	Orders are matched based on price: If the highest Buy price is greater than or equal to the lowest Sell price, a trade occurs.
@@ -103,7 +107,8 @@ https://github.com/VeerrajuP/Stock_trading_engine/blob/main/matching%20orders.pn
 	•	If a Sell order is fully matched, it is removed from the order book.
 
  🔹 6. Simulating a Trading Environment
- https://github.com/VeerrajuP/Stock_trading_engine/blob/main/simulating%20orders.png
+ 
+ ![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/simulating%20orders.png)
 
 📌 Why?
 	•	Generates random Buy/Sell orders for multiple stocks (T0 to T1023).
@@ -111,7 +116,8 @@ https://github.com/VeerrajuP/Stock_trading_engine/blob/main/matching%20orders.pn
 	•	The system periodically runs the matching engine, simulating market fluctuations.
 
  🔹7. Running the Trading Engine
- https://github.com/VeerrajuP/Stock_trading_engine/blob/main/running%20the%20trade%20engine.png
+ 
+ ![image alt](https://github.com/VeerrajuP/Stock_trading_engine/blob/main/running%20the%20trade%20engine.png)
 
  📌 Why?
 	•	Creates an order book instance and starts the simulation.
